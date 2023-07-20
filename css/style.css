@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.top-bar {
+  height: 120px;
+  background-color: black;
+}
+
+.main-section {
+  height: calc(100vh - 220px);
+  overflow-y:auto
+}
+
+.bottom-bar {
+  height: 100px;
+  background-color: #222222;
+}
