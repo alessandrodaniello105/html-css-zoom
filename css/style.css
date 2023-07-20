@@ -4,14 +4,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --lgrey: #4B4B4B;
+  --dgrey: #222222;
+}
+
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
 }
 
 /* UTILITIES */
 
 .debug {
-  border: 1px solid black;
+  border: 1px solid white;
   background-color: rgba(255, 0, 0, .2);
 }
 
@@ -23,12 +29,22 @@ body {
   flex-wrap: wrap;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
 
 .space-around {
   justify-content: space-around;
+}
+
+
+/* QUESTA UTILITY SERVE A DETERMINARE LO SPAZIO TRA LE LINEE/ROW E RENDERLA "NULLA" */
+.wrap-height {
+  align-content: flex-start;
 }
 
 /* MAIN */
@@ -42,6 +58,31 @@ main .top-bar {
   height: 100px;
 }
 
+main .top-bar ul {
+  list-style: none;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+main .top-bar ul li {
+  font-size: 0.9rem;
+}
+
+main .top-bar ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: var(--lgrey);
+  margin-left: 10px;
+  padding: 5px 5px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+main .top-bar ul li:last-child i {
+  transform: rotate(45deg);
+}
+
 main .main-section {
   height: calc(100vh - 210px);
   /* margin: 5px auto; da capire se è da lasciare */
@@ -51,7 +92,7 @@ main .main-section {
 
 main .bottom-bar {
   height: 110px;
-  background-color: #222222;
+  background-color: var(--dgrey);
 }
 
 
@@ -59,6 +100,7 @@ main .bottom-bar {
 
 .main-section .online-user {
   position: relative;
+  margin: 0 3px 10px 3px;
 }
 
 .main-section .online-user,
@@ -79,7 +121,6 @@ main .bottom-bar {
   height: 30px;
   left: 0;
   bottom: 0;
-  color: white;
   padding: 3px 6px;
   background-color: rgba(0, 0, 0, .8);
 }
