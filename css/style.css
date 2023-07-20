@@ -164,22 +164,30 @@ main .bottom-bar ul li:first-child a {
   font-size: 2rem;
 }
 
-.bottom-bar .my-settings { 
-  position: relative;
-  height: 100%;
-  right: 15px;
+main .bottom-bar ul li:last-child a {
+  font-size: 0.8rem;
+  text-transform: capitalize;
 }
 
 .col {
   /* background-color: red; */
   /* border: 1px solid black; */
   height: 100%;
-  width: 100px;
+  width: 80px;
   text-align: center;
+}
+
+.col span {
+  font-size: 2rem
+}
+
+.special {
+  width: 120px;
 }
 
 .small-col {
   height: 100px;
+  font-size: 0.8rem;
 }
 
 .small-col a {
@@ -188,18 +196,25 @@ main .bottom-bar ul li:first-child a {
   margin-right: 10px;
 }
 
-.col span {
-  font-size: 2rem
+
+
+/* BOTTOM LEFT MY SETTINGS  */
+
+.bottom-bar .my-settings { 
+  position: relative;
+  height: 100%;
 }
 
-.bottom-bar .col .text-box a {
-  font-size: 1rem;
+
+
+
+/* BOTTOM CENTER ACTIONS */
+
+.green {
+  color: #4BC800;
 }
 
-.bottom-bar .end-call .box {
-
-}
-
+/* BOTTOM RIGHT END CALL */
 .bottom-bar .end-call .box a {
   display: inline-block;
   background-color: var(--lgrey);
