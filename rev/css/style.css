@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lgrey: #4B4B4B;
+  --dgrey: #222222;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+}
+
+.col,
+.small-col,
+button {
+  cursor: pointer;
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+} */
+
+/* UTILITIES */
+
+.debug {
+  border: 1px solid white;
+  background-color: rgba(255, 0, 0, .2);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center; 
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+
+/* QUESTA UTILITY SERVE A DETERMINARE LO SPAZIO TRA LE LINEE/ROW E RENDERLA "NULLA" */
+.wrap-height {
+  align-content: flex-start;
+}
+
+/* MAIN */
+
+main .top-bar,
+main .main-section {
+  background-color: black;
+}
+
+main .top-bar {
+  height: 100px;
+  text-align: right;  
+}
+
+main .top-bar{
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+main .top-bar button {
+  font-size: 0.8rem;
+}
+
+main .top-bar button:last-child i {
+  transform: rotate(45deg);
+}
+
+main .top-bar button{
+  background-color: var(--lgrey);
+  margin-left: 10px;
+  padding: 5px 5px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+}
+
+main .main-section {
+  height: calc(100vh - 200px);
+  overflow-y:auto;
+}
+
+main .bottom-bar {
+  height: 100px;
+  background-color: var(--dgrey);
+}
+
+
+/* ONLINE-USER BOX */
+
+.main-section .online-user {
+  position: relative;
+  margin: 0 3px 10px 3px;
+}
+
+.main-section .online-user,
+.online-user .img-box {
+  width: 300px;
+  height: 200px;
+}
+
+.online-user .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.online-user .name-badge {
+  position: absolute;
+  /* display: inline-block; */
+  height: 30px;
+  left: 0;
+  bottom: 0;
+  padding: 3px 6px;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.online-user .name-badge span {
+  font-size: 0.9rem;
+  line-height: 26px;
+}
+
+.online-user .name-badge span i {
+  font-size: 1rem;
+}
+
+/* BOTTOM-BAR */
+
+
+.col {
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.col span {
+  text-transform: capitalize;
+}
+
+
+.small-col {
+  font-size: 0.8rem;
+}
+
+.my-settings .icon i,
+.actions .icon i {
+  font-size: 2rem;
+}
+
+/* BOTTOM LEFT MY SETTINGS  */
+
+.bottom-bar .my-settings { 
+  position: relative;
+  height: 100%;
+}
+
+
+/* BOTTOM CENTER ACTIONS */
+
+.active {
+  color: #4BC800;
+}
+
+/* BOTTOM RIGHT END CALL */
+.bottom-bar .end-call .box a {
+  display: inline-block;
+  background-color: var(--lgrey);
+  /* line-height: 85px; */
+  padding: 35px 20px;
+  color: red;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
